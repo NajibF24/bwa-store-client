@@ -9,11 +9,11 @@ export default function FeaturedGame() {
   const getFeatureGameList = useCallback(async () => {
     const data = await getFeaturedGame()
     setGameList(data)
-  }, [])
+  }, [getFeaturedGame])
 
   useEffect(() => {
     getFeatureGameList()
-  }, [getFeatureGameList])
+  }, [])
 
   const API_IMG = process.env.NEXT_PUBLIC_IMAGE
 

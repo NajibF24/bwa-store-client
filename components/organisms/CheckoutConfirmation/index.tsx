@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import { toast } from "react-toastify"
 import { setCheckout } from "../../../services/player"
 import { useRouter } from "next/router"
@@ -12,8 +12,9 @@ export default function CheckoutConfirmation() {
 
     const dataItem = JSON.parse(dataItemLocal!)
     const dataTopUp = JSON.parse(dataTopUpLocal!)
+
     if (!checkbox) {
-      toast.error("pastikan anda telah melakukan pembayaran!")
+      toast.error("Pastikan anda telah melakukan pembayaran!")
     }
     const data = {
       voucher: dataItem._id,

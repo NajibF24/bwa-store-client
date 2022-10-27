@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-4 text-lg-start text-center">
-              <a href="" className="mb-30">
+              <a href="/" className="mb-30">
                 <svg
                   width="60"
                   height="60"

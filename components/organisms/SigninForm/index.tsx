@@ -23,7 +23,7 @@ export default function SigninForm() {
         toast.error(response.message)
       } else {
         toast.success("Login success!")
-        const { token } = response.data
+        const token = response.data
         const tokenBase64 = Buffer.from(token).toString("base64")
         Cookies.set("token", tokenBase64, { expires: 1 })
         router.push("/")

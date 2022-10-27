@@ -34,11 +34,15 @@ export default function ProfileEdit() {
       setUser(userFromPayload)
     }
   }, [])
+
   const onSubmit = async () => {
     const data = new FormData()
+
     data.append("image", user.avatar)
     data.append("name", user.name)
+
     const response = await updateProfile(data, user.id)
+
     if (response.error) {
       toast.error(response.message)
     } else {
@@ -59,7 +63,7 @@ export default function ProfileEdit() {
                 <div className="image-upload">
                   <label htmlFor="avatar">
                     {imagePreview === "/" ? (
-                      <Image
+                      <img
                         src={user.avatar}
                         alt="icon upload"
                         width={90}
@@ -67,7 +71,7 @@ export default function ProfileEdit() {
                         style={{ borderRadius: "100%" }}
                       />
                     ) : (
-                      <Image
+                      <img
                         src={imagePreview}
                         alt="icon upload"
                         width={90}

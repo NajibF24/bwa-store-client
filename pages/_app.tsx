@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.css"
 import "../styles/404-not-found.css"
 import "../styles/checkout.css"
 import "../styles/complete-checkout.css"

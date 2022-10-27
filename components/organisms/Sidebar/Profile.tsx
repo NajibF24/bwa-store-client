@@ -23,7 +23,7 @@ export default function Profile() {
   }, [])
   return (
     <div className="user text-center pb-50 pe-30">
-      <Image
+      <img
         src={user.avatar}
         width="90"
         height="90"

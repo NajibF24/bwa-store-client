@@ -21,6 +21,7 @@ export default function GameItem(props: GameItemProps) {
               width={205}
               height={270}
               alt="thumbnail"
+              layout="fixed"
             />
           </div>
           <div className="cover position-absolute bottom-0 m-32">
@@ -31,6 +32,7 @@ export default function GameItem(props: GameItemProps) {
                   width={54}
                   height={36}
                   alt="console"
+                  layout="fixed"
                 />
               </div>
               <div>

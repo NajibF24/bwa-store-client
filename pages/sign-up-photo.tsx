@@ -21,11 +21,11 @@ export default function SignUpPhoto() {
     const data = await getGameCategory()
     setCategories(data)
     setFavorite(data[0]._id)
-  }, [])
+  }, [getGameCategory])
 
   useEffect(() => {
     getGameCategoryAPI()
-  }, [getGameCategoryAPI])
+  }, [])
 
   useEffect(() => {
     const getLocalForm = localStorage.getItem("user-form")
@@ -47,6 +47,16 @@ export default function SignUpPhoto() {
     data.append("status", "Y")
     data.append("favorite", favorite)
 
+    if (favorite === "") {
+      toast.error("Silahkan Refresh Kembali dan Pilih Game Favorite Anda!")
+      return false
+    }
+
+    if (image === "") {
+      toast.error("Silahkan Refresh Kembali dan Upload Foto Profil Anda!")
+      return false
+    }
+
     const result = await setSignUp(data)
     if (result.error) {
       toast.error(result.message)
@@ -67,7 +77,7 @@ export default function SignUpPhoto() {
                 <div className="image-upload text-center">
                   <label htmlFor="avatar">
                     {imagePreview ? (
-                      <Image
+                      <img
                         src={imagePreview}
                         className="img-upload"
                         alt="upload"
@@ -85,7 +95,7 @@ export default function SignUpPhoto() {
                     id="avatar"
                     type="file"
                     name="avatar"
-                    accept="image/png, image/jpeg"
+                    accept="image/png, image/jpeg, image/jpg"
                     onChange={(event) => {
                       const img = event.target.files![0]
                       setImagePreview(URL.createObjectURL(img))

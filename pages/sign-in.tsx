@@ -27,7 +27,7 @@ function SignIn() {
             </form>
           </div>
           <div className="col-xxl-7 col-lg-6 bg-blue text-center pt-lg-145 pb-lg-145 d-lg-block d-none">
-            <Image
+            <img
               src="/img/Header-9.png"
               width="502"
               height="391.21"
