@@ -1,7 +1,5 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
+module.exports = {
+  images: {
+    domains: ['bwa-store-app.herokuapp.com']
+  }
 }
-
-module.exports = nextConfig

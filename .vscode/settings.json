@@ -1,0 +1,13 @@
+{
+  "terminal.integrated.fontWeight": "normal",
+  "editor.fontWeight": "400",
+  "terminal.integrated.fontWeightBold": "bold",
+  "rest-client.fontWeight": "normal",
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontSize": 20,
+  "errorLens.fontStyleItalic": true,
+  "errorLens.fontWeight": "400",
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": false,
+  "editor.suggest.showFunctions": true
+}
